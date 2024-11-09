@@ -8,6 +8,7 @@ export let lngj = {
     pojects2: "لايوجد حتى الان!",
     edu: "التعليم",
     edup: "طالب في كلية علوم الحاسوب و الذكاء الاصطناعي",
+    workingWith: "اعمل لدى",
     socials: "مواقع التواصل",
     footer: "كل الحقوق محفوظه ومن هالسوالف",
   },
@@ -20,6 +21,7 @@ export let lngj = {
     projects2: "there isn't any at the moment!",
     edu: "education",
     edup: "a computer science and artificial intillegence student",
+    workingWith: "working with",
     socials: "social links",
     footer: "All rights reserved"
   }

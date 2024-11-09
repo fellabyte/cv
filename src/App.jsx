@@ -8,6 +8,7 @@ import Skills from './compos/Skills'
 import Projects from './compos/Projects'
 import Socials from './compos/Socials'
 import Edu from './compos/Edu'
+import WorkingWith from './compos/WorkingWith'
 
 
 export default function App() {
@@ -27,7 +28,8 @@ export default function App() {
       <Welcome />
       <Edu />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
+      <WorkingWith />
       <Socials />
       <Footer />
     </div>
