@@ -1,15 +1,16 @@
-/** @type {import('tailwindcss').Config} */
+import type { Config } from "tailwindcss";
+
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
     extend: {
       fontFamily: {
-        cascadia: "CascaydiaCove NF",
-        noto: "Noto Sans Arabic"
+        rubik: "var(--font-rubik)",
       },
       colors: {
         radixPurple: "#18111B",
@@ -19,7 +20,7 @@ export default {
         'very-slow-spin': 'very-slow-spin 15s linear infinite', // Adjust the duration to be very slow
         'reverse-spin': 'reverse-spin 3s linear infinite', // Adjust duration as needed
         'very-slow-reverse-spin': 'very-slow-reverse-spin 15s linear infinite', // Adjust the duration here
-        "marquee": 'marquee 10s linear infinite',
+        "marquee": 'marqueee 20s linear infinite',
       },
       keyframes: {
         'slow-spin': {
@@ -38,12 +39,12 @@ export default {
           '0%': { transform: 'rotate(0deg)' },
           '100%': { transform: 'rotate(-360deg)' }, // Negative for counterclockwise rotation
         },
-        marquee: {
-          '0%': { transform: 'translateX(100%)' },
-          '100%': { transform: 'translateX(-100%)' },
+        marqueee: {
+          '0%': { transform: 'translateX()' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },
   },
   plugins: [],
-}
+} satisfies Config;
