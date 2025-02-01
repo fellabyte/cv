@@ -10,7 +10,7 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div className={`dark:bg-gray-800 duration-300 select-none h-full w-screen`} >
+    <div className={`duration-300 bg-gradient-to-tr from-gray-400 to-white dark:from-radixPurple dark:to-gray-800 select-none h-full w-screen`} >
       <Nav />
       <Welcome />
       <Edu />
