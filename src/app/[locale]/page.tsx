@@ -11,6 +11,13 @@ import React from 'react'
 const Home = () => {
   return (
     <div className={`duration-300 bg-gradient-to-tr from-gray-400 to-white dark:from-radixPurple dark:to-gray-800 select-none h-full w-screen`} >
+{/*       <Img
+                key={index}
+                src={icon.image}
+                sizes={`mx-5 ${icon.big === true ? "lg:size-40 size-40 md:size-40" : icon.big === false ? "lg:size-28 size-20 md:size-24" : "lg:size-32 size-24 md:size-28"}`}
+                className={`rounded-lg ${icon.invert ? 'dark:invert' : ''}`}
+                alt='imagelogo'
+              /> */}
       <Nav />
       <Welcome />
       <Edu />

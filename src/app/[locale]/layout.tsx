@@ -9,7 +9,7 @@ import { ThemeProvider } from 'next-themes';
 
 type LayoutProps = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 const rubik = Rubik({

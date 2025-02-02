@@ -1,16 +1,12 @@
+import { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
  
 const withNextIntl = createNextIntlPlugin();
  
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-	basePath: "/cv",
+const nextConfig: NextConfig = {
 	output: "export",
-	reactStrictMode: true,
-	i18n: {
-		locales: ["ar", "en"],
-		defaultLocale: "en",
-	}
+	basePath: "/cv"
 };
  
 export default withNextIntl(nextConfig);
