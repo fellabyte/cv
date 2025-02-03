@@ -4,9 +4,6 @@ import createNextIntlPlugin from 'next-intl/plugin';
 const withNextIntl = createNextIntlPlugin();
  
 /** @type {import('next').NextConfig} */
-const nextConfig: NextConfig = {
-	output: "export",
-	basePath: "/cv"
-};
+const nextConfig: NextConfig = {};
  
 export default withNextIntl(nextConfig);
