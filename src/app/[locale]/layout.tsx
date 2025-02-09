@@ -7,6 +7,11 @@ import "@/styles/tailwind.css"
 import { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 
+export const dynamic = "force-static"
+export const generateStaticParams = () => {
+  return [{ locale: "ar" }, { locale: "en" }]
+}
+
 type LayoutProps = {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
