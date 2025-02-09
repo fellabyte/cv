@@ -1,14 +1,18 @@
 {
+  "homepage": "https://1myh.github.io/cv",
   "name": "cv2.0",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
     "start": "next start",
+    "build": "next build",
+    "start-prod": "next start",
+    "lint": "next lint",
     "export": "next export",
-    "deploy": "next build && next export && gh-pages -d out",
-    "lint": "next lint"
+    "out": "next build && next export && touch ./out/.nojekyll",
+    "predeploy": "npm run out",
+    "dev": "next dev --turbopack",
+    "deploy": "npm run predeploy && gh-pages -d out --dotfiles"
   },
   "dependencies": {
     "jotai": "^2.11.2",
