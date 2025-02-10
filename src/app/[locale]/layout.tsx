@@ -24,7 +24,6 @@ const rubik = Rubik({
 
 export const metadata: Metadata = {
   title: "محمد يحيى",
-
 };
 
 
