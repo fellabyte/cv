@@ -10,7 +10,6 @@ const nextConfig: NextConfig = {
 	trailingSlash: true,
 	assetPrefix: isProd ? "/cv" : "",
 	basePath: isProd ? "/cv" : "",
-	output: "export",
 };
  
 export default withNextIntl(nextConfig);
