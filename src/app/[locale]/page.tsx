@@ -7,6 +7,7 @@ import Socials from '@/components/Socials'
 import WorkingWith from '@/components/WorkingWith'
 import Welcome from '@/components/Welcome'
 import React from 'react'
+import Experiance from '@/components/Experiance'
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <Welcome />
       <Edu />
       <Skills />
+      <Experiance />
       <Projects />
       <WorkingWith />
       <Socials />
