@@ -16,7 +16,7 @@ export default function Skills() {
       <div className="w-full overflow-hidden relative">
         <div className="flex w-max animate-marquee space-x-10 justify-center items-center lg:gap-x-5 py-7">
           {skills.concat(skills).map((icon, index) => (
-            <img key={index} src={icon.image} alt="skill-icon" className={`mx-5 rounded-sm sm:rounded-lg ${icon.invert ? 'dark:invert' : ''} ${icon.big === true ? "lg:h-14 h-5 sm:h-10 md:h-12" : icon.big === false ? "lg:h-28 h-10 sm:h-20 md:h-24" : "lg:h-20 h-7 sm:h-14 md:h-16"}`} />
+            <img key={index} src={icon.image} alt="skill-icon" className={`mx-5 rounded-sm sm:rounded-lg ${icon.invert ? 'dark:invert' : ''} ${icon.big === true ? "lg:h-14 h-7 sm:h-10 md:h-12" : icon.big === false ? "lg:h-28 h-14 sm:h-20 md:h-24" : "lg:h-20 h-10 sm:h-14 md:h-16"}`} />
           ))}
         </div>
       </div>
