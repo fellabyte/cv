@@ -12,11 +12,12 @@
   },
   "dependencies": {
     "jotai": "^2.11.2",
-    "next": "15.1.6",
+    "next": "^15.3.1",
     "next-intl": "^3.26.3",
     "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-fast-marquee": "^1.6.5",
     "react-icons": "^5.4.0"
   },
   "devDependencies": {
