@@ -2,10 +2,7 @@
 import React from 'react'
 import { useTranslations } from 'next-intl'
 import Marquee from 'react-fast-marquee'
-
-const skills = [
-  { image: `/images/javascript.svg`, big: false, invert: false }, { image: `/images/typescript.svg`, big: false, invert: false }, { image: `/images/tailwind.svg`, big: null, invert: false }, { image: `/images/git.svg`, big: false, invert: false }, { image: `/images/next.svg`, big: true, invert: true }, { image: `/images/react.svg`, big: false, invert: false }, { image: `/images/redux.svg`, big: false, invert: false }, { image: `/images/zustand.svg`, big: false, invert: false }, { image: `/images/html.svg`, big: false, invert: false }, { image: `/images/css.svg`, big: false, invert: false }, { image: `/images/jotai.svg`, big: true, invert: true }
-]
+import { skills } from '@/utils/skills'
 
 export default function Skills() {
   const t = useTranslations("translation")

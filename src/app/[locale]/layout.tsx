@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { Rubik } from 'next/font/google';
 import "@/styles/tailwind.css"
-import { Metadata } from 'next';
 import { ThemeProvider } from 'next-themes';
 
 type LayoutProps = {
@@ -16,10 +15,6 @@ const rubik = Rubik({
   variable: "--font-rubik",
   subsets: ["arabic", "latin"],
 })
-
-export const metadata: Metadata = {
-  title: "محمد يحيى",
-};
 
 
 export default async function LocaleLayout({
@@ -35,8 +30,8 @@ export default async function LocaleLayout({
  
   return (
     <html lang={locale} className='dark' style={{colorScheme: 'dark'}} suppressHydrationWarning>
-      <meta name='theme-color' content='#1f2937' />
-      <body className={`${rubik.variable} font-rubik antialiased`} >
+      <meta name='theme-color' content='#000000' />
+      <body dir={locale === "ar" ? "rtl" : "ltr"} className={`${rubik.variable} font-rubik antialiased`} >
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute={"class"}>
           	{children}

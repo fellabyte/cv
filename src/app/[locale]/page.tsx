@@ -1,28 +1,66 @@
-import Edu from '@/components/Edu'
-import Footer from '@/components/Footer'
-import Nav from '@/components/Nav'
-import Projects from '@/components/Projects'
-import Skills from '@/components/Skills'
-import Socials from '@/components/Socials'
-import WorkingWith from '@/components/WorkingWith'
-import Welcome from '@/components/Welcome'
-import React from 'react'
-import Experiance from '@/components/Experiance'
+import LanguageToggle from "@/components/v3/LanguageToggle"
+import TechStack from "@/components/v3/TechStack"
+import { projects } from "@/utils/projects"
+import { skills } from "@/utils/skills"
+import { socials } from "@/utils/socials"
+import { Metadata } from "next"
+import { getLocale, getTranslations } from "next-intl/server"
+import Image from "next/image"
+import React from "react"
 
-const Home = () => {
-  return (
-    <div className={`duration-300 bg-gradient-to-tr from-gray-400 to-white dark:from-radixPurple dark:to-gray-800 select-none h-full w-screen`} >
-      <Nav />
-      <Welcome />
-      <Edu />
-      <Skills />
-      <Experiance />
-      <Projects />
-      <WorkingWith />
-      <Socials />
-      <Footer />
-    </div>
-  )
+const Home = async () => {
+	const t = await getTranslations("v3")
+	return(
+		<main className={`bg-black grid justify-items-center items-center ltr:font-mono py-10 xl:gap-16`}>
+			<div className={`md:flex md:justify-center grid justify-items-center items-center w-full xl:w-[70rem] px-5 xl:px-0`}>
+				<section className={`border-x-2 border-t-2 md:border-y-2 md:border-l-2 border-stone-600 grid justify-items-start items-center md:w-1/2 w-full p-5 md:p-10 sm:h-[35vh]`}>
+					<div className={`w-full flex justify-between items-center`}>
+						<Image src={`/images/3myh.jpg`} alt="logo" width={1080} height={1080} className={`size-20 rounded-full mb-5 md:mb-0`} />
+						<LanguageToggle />
+					</div>
+					<h1 className={`text-4xl sm:text-5xl font-semibold`}>{t("hello")}</h1>
+					<p className={`text-sm sm:text-lg`}>{t("desc")}</p>
+				</section>
+				<section className={`border-2 border-stone-600 grid justify-items-start items-center md:w-1/2 w-full p-5 md:p-10 md:h-[35vh]`}>
+					<div className={`grid justify-items-center items-center grid-cols-4 w-full text-3xl sm:text-4xl gap-y-10 text-stone-400 py-4 sm:py-7`}>
+						{socials.map(({ Icon, link }, index) => (
+							<a href={link} key={index} target='_blank' rel='noreferrer noopener'>
+								<Icon />
+							</a>
+						))}
+					</div>
+				</section>
+			</div>
+			<section className={`grid justify-items-center items-center w-full xl:w-[70rem] px-5 xl:px-0`}>
+				<h1 className={`my-5 text-2xl font-semibold xl:hidden`}>{t("techStack")}</h1>
+				<div className={`grid justify-items-center border-[1px] border-stone-600 items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full`}>
+					{skills.map((skill, index) => (
+						<TechStack key={index} image={skill.image} className={`${skill.big ? "h-5 sm:h-7" : "h-10 sm:h-14"} ${skill.invert ? "invert" : ""} grayscale`} variant="card" />
+					))}
+				</div>
+			</section>
+			<section className={`grid justify-items-center items-center w-full xl:w-[70rem] px-5 xl:px-0`}>
+				<h1 className={`my-5 text-2xl font-semibold xl:hidden`}>{t("projects")}</h1>
+				<div className={`grid justify-items-center border-[1px] border-stone-600 items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full`}>
+					{projects.map((skill, index) => (
+						<TechStack key={index} image={skill.image} link={skill.link} className={`${skill.big ? "w-20 sm:w-20" : "w-28 sm:w-44"} ${skill.invert ? "invert" : ""} grayscale`} variant="link" />
+					))}
+				</div>
+			</section>
+		</main>
+	)
 }
 
 export default Home
+
+
+export const generateMetadata = async () : Promise<Metadata> => {
+	const locale = await getLocale()
+	const language = locale === "ar"
+	const t = await getTranslations("seo")
+	return {
+		title: t("title"),
+		description: t("desc"),
+		keywords: ["محمد", "محمد يحيى", "محمد يحيى حسن", "محمد الفريجي", "محمد يحيى الفريجي", "محمد يحيى حسن الفريجي", "mohamad", "mohamad yahea", "mohamad yahea hassan"]
+	}
+}

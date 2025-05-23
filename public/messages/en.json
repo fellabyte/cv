@@ -1,16 +1,26 @@
 {
-	"translation": {
-		"welcome": "Hi there",
-		"p": "I'm Mohamad, I'm 19 and a front-end developer",
-		"p2": "Working with modern technologies, as many companies are implementing them",
-		"skills": "The skills",
-		"experiance": "Experiance",
-		"projects": "Some of the projects",
-		"projects2": "There isn't any at the moment!",
-		"edu": "Education",
-		"edup": "A computer science and artificial intelligence student",
-		"workingWith": "Working with",
-		"socials": "Social links",
-		"footer": "All rights reserved"
-	}
+  "seo": {
+    "title": "Mohamad Yahea",
+    "desc": "my name is mohamed, i am 20 and i am a full stack developer (theoritically) \n Working with modern technologies, as many companies are implementing them"
+  },
+  "translation": {
+    "welcome": "Hi there",
+    "p": "I'm Mohamad, I'm 19 and a front-end developer",
+    "p2": "Working with modern technologies, as many companies are implementing them",
+    "skills": "The skills",
+    "experiance": "Experiance",
+    "projects": "Some of the projects",
+    "projects2": "There isn't any at the moment!",
+    "edu": "Education",
+    "edup": "A computer science and artificial intelligence student",
+    "workingWith": "Working with",
+    "socials": "Social links",
+    "footer": "All rights reserved"
+  },
+  "v3": {
+    "hello": "Hello",
+    "desc": "my name is mohamed, i am 20 and i am a full stack developer (theoritically)",
+    "techStack": "Tech Stack",
+    "projects": "Projects"
+  }
 }
