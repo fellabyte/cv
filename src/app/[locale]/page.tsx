@@ -41,7 +41,7 @@ const Home = async () => {
 				<h1 className={`my-5 text-2xl font-semibold xl:hidden`}>{t("techStack")}</h1>
 				<div className={`grid justify-items-center border-[1px] border-stone-600 items-center grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 w-full`}>
 					{skills.map((skill, index) => (
-						<TechStack key={index} image={skill.image} className={`${skill.big ? "h-5 sm:h-7" : "h-10 sm:h-14"} ${skill.invert ? "dark:invert" : ""} grayscale`} variant="card" />
+						<TechStack Icon={skill.Icon} key={index} className={`h-10 sm:h-14 dark:text-stone-400 text-black/70`} variant="card" />
 					))}
 				</div>
 			</section>

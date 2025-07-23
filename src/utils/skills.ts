@@ -1,3 +1,17 @@
+import { BiLogoCss3, BiLogoGit, BiLogoHtml5, BiLogoJavascript, BiLogoNodejs, BiLogoPostgresql, BiLogoReact, BiLogoTailwindCss, BiLogoTypescript } from "react-icons/bi"
+import { GrMysql } from "react-icons/gr"
+import { RiNextjsFill } from "react-icons/ri"
+
 export const skills = [
-  { image: `/images/javascript.svg`, big: false, invert: false }, { image: `/images/typescript.svg`, big: false, invert: false }, { image: `/images/tailwind.svg`, big: null, invert: false }, { image: `/images/git.svg`, big: false, invert: false }, { image: `/images/next.svg`, big: true, invert: true }, { image: `/images/react.svg`, big: false, invert: false }, { image: `/images/redux.svg`, big: false, invert: false }, { image: `/images/zustand.svg`, big: false, invert: false }, { image: `/images/html.svg`, big: false, invert: false }, { image: `/images/css.svg`, big: false, invert: false }, { image: `/images/jotai.svg`, big: true, invert: true }, { image: `/images/mysql.svg`, big: false, invert: true }
+  {Icon: BiLogoJavascript, color: "#FFD60A"},
+  {Icon: BiLogoTypescript, color: "#3B9EFF"},
+  {Icon: BiLogoTailwindCss, color: "#4CCCE6"},
+  {Icon: BiLogoGit, color: "#E54D2E"},
+  {Icon: RiNextjsFill, color: "#ffffff"},
+  {Icon: BiLogoReact, color: "#3B9EFF"},
+  {Icon: BiLogoHtml5, color: "#E54D2E"},
+  {Icon: BiLogoCss3, color: "#3B9EFF"},
+  {Icon: BiLogoNodejs, color: "#33B074"},
+  {Icon: GrMysql, color: ""},
+  {Icon: BiLogoPostgresql, color: "#3B9EFF"}
 ]

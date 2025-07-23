@@ -8,6 +8,6 @@ export const socials = [
 	{Icon: FaTelegram, link: "https://t.me/fellabyte"},
 	{Icon: FaReddit, link: "https://instagram.com/fellabyte"},
 	{Icon: FaGithub, link: "https://github.com/fellabyte"},
-	{Icon: FaLinkedin, link: "www.linkedin.com/in/fellabyte"},
+	{Icon: FaLinkedin, link: "https://www.linkedin.com/in/fellabyte"},
 	{Icon: FaWhatsapp, link: "https://t.me/fellabyte"}
 ]

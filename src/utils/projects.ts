@@ -12,12 +12,6 @@ export const projects = [
     big: false,
   },
   {
-    link: "https://1myh.github.io/elrayan",
-    image: "/images/elrayanLogo.svg",
-    invert: false,
-    big: true,
-  },
-  {
     link: "https://royalcomfurt.com",
     image: "/images/royalcomfort.svg",
     invert: false,
@@ -29,4 +23,16 @@ export const projects = [
     invert: false,
     big: true,
   },
+  {
+    link: "https://royaldemaison.com",
+    image: "/images/royalDeMaison.svg",
+    invert: true,
+    big: false
+  },
+  {
+    link: "https://perfumedemajor.com",
+    image: "/images/demajor.svg",
+    invert: true,
+    big: true
+  }
 ];

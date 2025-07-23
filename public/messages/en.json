@@ -13,13 +13,13 @@
     "projects2": "There isn't any at the moment!",
     "edu": "Education",
     "edup": "A computer science and artificial intelligence student",
-    "workingWith": "Working with",
+    "workingWith": "Worked For",
     "socials": "Social links",
     "footer": "All rights reserved"
   },
   "v3": {
     "hello": "Hello",
-    "desc": "my name is mohamed, i am 20 and i am a full stack developer (theoritically)",
+    "desc": "my name is mohamed, i am 20 and i am a full stack developer",
     "techStack": "Tech Stack",
     "projects": "Projects"
   }
